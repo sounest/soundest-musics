@@ -27,20 +27,19 @@ import Song from "./Components/genral/Song";
 import Yourplaylist from "./Components/Fav,Playlist/Yourplaylist";
 import About from "./Components/genral/Aboutus";
 import Error from "./Components/genral/Error";
-import ProtectedRoute from "./Components/ProtectedRoute";
 import SearchResults from "./Components/genral/SearchResults";
 import ArtistSongs from "./Components/genral/ArtistSongs";
 import ForgotPassword from "./Components/Form/ForgotPassword";
 import ResetPassword from "./Components/Form/ResetPassword";
 import Recent from "./Components/Fav,Playlist/Recent";
-import Rapsong from "./Components/genral/Rapsong"
-import Trendingsong from "./Components/genral/Trendingsong"
+import Rapsong from "./Components/genral/Rapsong";
+import Trendingsong from "./Components/genral/Trendingsong";
+
 // ✅ Admin Pages
 import AdminDashboard from "./Admin/AdminDashboard";
 import AdminUsers from "./Admin/AdminUser";
 import AdminArtist from "./Admin/AdminArtist";
 import AdminContact from "./Admin/AdminContact";
-
 import Admin from "./Admin/Admin";
 import Lovesong from "./Components/genral/Lovesong";
 
@@ -57,208 +56,37 @@ function App() {
         <Route path="/reset-password" element={<ResetPassword />} />
 
         {/* ===================== USER SIDE ROUTES ===================== */}
-        <Route
-          path="/"
-          element={
-            <ProtectedRoute>
-              <Home />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/recent"
-          element={
-            <ProtectedRoute>
-              <Recent />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/playlist"
-          element={
-            <ProtectedRoute>
-              <Playlist />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/fav"
-          element={
-            <ProtectedRoute>
-              <Fav />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/chill"
-          element={
-            <ProtectedRoute>
-              <Chill />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/good"
-          element={
-            <ProtectedRoute>
-              <FeelGood />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/party"
-          element={
-            <ProtectedRoute>
-              <Party />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/podcast"
-          element={
-            <ProtectedRoute>
-              <Podcast />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/relax"
-          element={
-            <ProtectedRoute>
-              <Relax />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/romance"
-          element={
-            <ProtectedRoute>
-              <Romance />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/signinartist"
-          element={
-            <ProtectedRoute>
-              <Signinartist />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/loginartist"
-          element={
-            <ProtectedRoute>
-              <Loginartist />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/contact"
-          element={
-            <ProtectedRoute>
-              <Contact />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/userprofile"
-          element={
-            <ProtectedRoute>
-              <Userprofile />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/artistprofile"
-          element={
-            <ProtectedRoute>
-              <ArtistProfile />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/setting"
-          element={
-            <ProtectedRoute>
-              <Setting />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/allsongs"
-          element={
-            <ProtectedRoute>
-              <Song />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/yoursong"
-          element={
-            <ProtectedRoute>
-              <Yourplaylist />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/aboutus"
-          element={
-            <ProtectedRoute>
-              <About />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/search"
-          element={
-            <ProtectedRoute>
-              <SearchResults />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/artistsong"
-          element={
-            <ProtectedRoute>
-              <ArtistSongs />
-            </ProtectedRoute>
-          }
-        />
-
-          <Route
-          path="/Lovesong"
-          element={
-            <ProtectedRoute>
-              <Lovesong />
-            </ProtectedRoute>
-          }
-        />
-
-         <Route
-          path="/Rapsong"
-          element={
-            <ProtectedRoute>
-              <Rapsong />
-            </ProtectedRoute>
-          }
-        />
-      
-      <Route
-          path="/Trendingsong"
-          element={
-            <ProtectedRoute>
-              <Trendingsong />
-            </ProtectedRoute>
-          }
-        />
+        <Route path="/" element={<Home />} />
+        <Route path="/recent" element={<Recent />} />
+        <Route path="/playlist" element={<Playlist />} />
+        <Route path="/fav" element={<Fav />} />
+        <Route path="/chill" element={<Chill />} />
+        <Route path="/good" element={<FeelGood />} />
+        <Route path="/party" element={<Party />} />
+        <Route path="/podcast" element={<Podcast />} />
+        <Route path="/relax" element={<Relax />} />
+        <Route path="/romance" element={<Romance />} />
+        <Route path="/signinartist" element={<Signinartist />} />
+        <Route path="/loginartist" element={<Loginartist />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/userprofile" element={<Userprofile />} />
+        <Route path="/artistprofile" element={<ArtistProfile />} />
+        <Route path="/setting" element={<Setting />} />
+        <Route path="/allsongs" element={<Song />} />
+        <Route path="/yoursong" element={<Yourplaylist />} />
+        <Route path="/aboutus" element={<About />} />
+        <Route path="/search" element={<SearchResults />} />
+        <Route path="/artistsong" element={<ArtistSongs />} />
+        <Route path="/Lovesong" element={<Lovesong />} />
+        <Route path="/Rapsong" element={<Rapsong />} />
+        <Route path="/Trendingsong" element={<Trendingsong />} />
 
         {/* ===================== ADMIN ROUTES ===================== */}
-        <Route path="/admin"  element={<Admin/>} />
+        <Route path="/admin" element={<Admin />} />
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
         <Route path="/admin/users" element={<AdminUsers />} />
-       <Route path="/admin/artists" element={<AdminArtist />} />
-        <Route path="/admin/contacts" element={<AdminContact />} /> *
+        <Route path="/admin/artists" element={<AdminArtist />} />
+        <Route path="/admin/contacts" element={<AdminContact />} />
         <Route path="/admin/songs" element={<UploadSongArtist />} />
 
         {/* ===================== 404 ===================== */}
