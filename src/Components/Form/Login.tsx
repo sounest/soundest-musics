@@ -19,7 +19,7 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const [showeye, setshoweye] = useState(false);
 
-  const URL = "http://localhost:5000/api/auth/login";
+  const URL = "https://soundest-backend.vercel.app/api/auth/login";
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUser({ ...user, [e.target.name]: e.target.value });
