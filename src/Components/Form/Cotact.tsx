@@ -11,7 +11,7 @@ const Contact = () => {
     feedback: "",
   });
 
-  const URL = "http://localhost:5000/api/contact/contact";
+  const URL = "https://soundest-backend.vercel.app/api/contact/contact";
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
